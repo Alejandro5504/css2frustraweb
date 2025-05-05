@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #f5f6f7;
+  }
+  
+  .header {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #0a0a23;
+    color: #fff;
+    border-bottom: 4px solid #fdb347;
+  }
+  
+  .gallery { /*es un contenedor flexible (flexbox) para imágenes.*/
+    display: flex;
+    flex-direction: row; /*los hijos se colocan en fila.*/
+    flex-wrap: wrap; /*permite que los elementos se vayan a la siguiente línea si no caben.*/
+    justify-content: center; /* centra los elementos horizontalmente.*/
+    align-items: center; /*centra los elementos verticalmente dentro de la fila.*/
+    gap: 36px; /*espacio de 16px entre elementos.*/
+    max-width: 1400px; /*ancho máximo del contenedor.*/
+    margin: 0 auto;  /*centra el contenedor horizontalmente.*/
+    padding: 20px 10px; /*espacio interno arriba/abajo (20px) y a los lados (10px)*/
+  }
+  
+  .gallery img {
+    width: 100%;
+    max-width: 550px;
+    height: 500px;
+    object-fit: cover; /*recorta la imagen para cubrir el área sin deformarla.*/
+    border-radius: 10px;
+  }
+  
+  .gallery::after {
+    content: "";
+    width: 350px;
+  }
+  
